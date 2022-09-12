@@ -12,6 +12,9 @@ import {profileAPI} from "../../api/profile-api";
 class ProfileContainerAPI extends React.Component{
     componentDidMount() {
         let userID = this.props.router.params.userID
+        if(!userID){
+            userID =2;
+        }
         profileAPI.profile(userID).then(data =>{
                 this.props.setUser(data);
             }
