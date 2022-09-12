@@ -31,6 +31,10 @@
   list-style-type: armenian;
   text-align: left;
 }
+.app-one-content{
+  grid-area: c;
+  background-color: aqua;
+}
 .app-one{
   display: grid;
   grid-template-areas:

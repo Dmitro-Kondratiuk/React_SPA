@@ -1,0 +1,12 @@
+.image {
+    width: 150px;
+}
+.active {
+    cursor: pointer;
+    color: goldenrod;
+}
+.item {
+    cursor: pointer;
+    color : black;
+    text-decoration: none;
+}

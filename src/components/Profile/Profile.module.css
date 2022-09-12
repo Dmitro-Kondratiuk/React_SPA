@@ -1,0 +1,14 @@
+
+.item{
+    color: red;
+}
+.item img{
+    width: 100px;
+}
+.button {
+    border-radius: 15px;
+    border-bottom-color: rgba(172,47,115,0.81);
+}
+.content{
+    font-family: Algerian;
+}
