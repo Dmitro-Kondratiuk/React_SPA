@@ -27,6 +27,20 @@
 .App-link {
   color: #61dafb;
 }
+.welcome{
+  list-style-type: armenian;
+  text-align: left;
+}
+.app-one{
+  display: grid;
+  grid-template-areas:
+    "h h "
+    "n c ";
+
+  grid-template-rows: 80px 2fr;
+  grid-template-columns: 4fr 20fr;
+  /*grid-gap: 10px;*/
+}
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +49,5 @@
   to {
     transform: rotate(360deg);
   }
+
 }
