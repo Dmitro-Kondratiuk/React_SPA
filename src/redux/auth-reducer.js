@@ -27,8 +27,7 @@ export const setUserData = (id,email,login)=> ({type:SET_USER_DATA,data:{id,emai
 
 
 
-export const autologin =()=> {
-    return (dispach) => {
+export const autologin =()=> (dispach) => {
         authAPI.auth().then(response => {
             if (response.data.resultCode === 0) {
                 let {id, email, login} = response.data.data
@@ -36,5 +35,5 @@ export const autologin =()=> {
             }
         })
     }
-}
+
 export default authReducer;
