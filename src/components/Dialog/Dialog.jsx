@@ -2,6 +2,7 @@ import class_name from "./Dialog.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
+
 function Dialog(props){
 
     let dialog = props.state.dialogs.map(d=><DialogItem name={d.name} key={d.id} id={d.id}/>)

@@ -2,6 +2,7 @@ import React from "react";
 import Preloader from "../../common/Preloader/Preloader";
 import no_image from "../../../upload/no-image.png";
 
+
 const Ava = (props) => {
 
     if (!props.profile){
