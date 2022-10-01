@@ -1,6 +1,4 @@
-
 const SEND_MESSAGE = "SEND_MESSAGE"
-const UPDATE_NEW_MESSAGE = "UPDATE_NEW_MESSAGE"
 
 let initial = {
         dialogs:[
@@ -39,7 +37,7 @@ let initial = {
                 message:"What are you do in",
             },
         ],
-        newMessageText : '',
+
     }
 
 const dialogReducer = (state= initial,action)=> {
@@ -47,35 +45,19 @@ const dialogReducer = (state= initial,action)=> {
         case SEND_MESSAGE: {
             let newMessage = {
                 id: 4,
-                message: state.newMessageText,
+                message: action.messageTest,
             }
             let copyState = {...state}
             copyState.messages = [...state.messages]
             copyState.messages.push(newMessage);
-            copyState.newMessageText = '';
-            return copyState
-        }
-        case UPDATE_NEW_MESSAGE:
-        {
-            let copyState = {...state};
-            copyState.newMessageText = action.newMessage;
             return copyState
         }
         default:
             return state
     }
 }
-export  const newMessageCreator = () =>{
-    return {
-        type : SEND_MESSAGE
-    }
-}
-export const updateMessageCreator= (body) =>{
-    return {
-        type: UPDATE_NEW_MESSAGE,
-        newMessage : body,
-    }
-}
+export  const newMessageCreator = (messageTest) =>({type : SEND_MESSAGE,messageTest})
+
 export default dialogReducer;
 
 
