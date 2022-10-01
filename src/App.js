@@ -10,6 +10,7 @@ import UsersContainer from "./components/Users/UserContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
+import ProfilePage from "./components/Profile/ProgilePage";
 
 
 
@@ -21,6 +22,7 @@ const App = (props) => {
                 <Nav/>
                 <div className="app-one-content">
                     <Routes>
+                        <Route  path="/profile" element={<ProfilePage />}/>
                         <Route  path="/profile/:userID" element={<ProfileContainer />}/>
                         <Route  path="/dialog/*" element={<DialogConatainer />}/>
                         <Route  path="/news" element={<News/>}/>
